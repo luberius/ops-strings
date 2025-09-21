@@ -1,18 +1,8 @@
 "use client";
 
-import {
-  Building2,
-  Calculator,
-  DollarSign,
-  Receipt,
-  Settings2,
-  ShoppingCart,
-  TrendingUp,
-  Users,
-} from "lucide-react";
+import { Building2, Calculator, Receipt, ShoppingCart } from "lucide-react";
 
 import { NavMain } from "@/components/nav-main";
-import { NavProjects } from "@/components/nav-projects";
 import { NavUser } from "@/components/nav-user";
 import { TeamSwitcher } from "@/components/team-switcher";
 import {
@@ -22,6 +12,7 @@ import {
   SidebarHeader,
   SidebarRail,
 } from "@/components/ui/sidebar";
+import { NavSettings } from "./nav-settings";
 
 const data = {
   user: {
@@ -31,19 +22,9 @@ const data = {
   },
   teams: [
     {
-      name: "Main Company",
+      name: "Syahril Pratama Solution",
       logo: Building2,
       plan: "Enterprise",
-    },
-    {
-      name: "Subsidiary Co.",
-      logo: TrendingUp,
-      plan: "Professional",
-    },
-    {
-      name: "Demo Tenant",
-      logo: Calculator,
-      plan: "Free",
     },
   ],
   navMain: [
@@ -89,21 +70,6 @@ const data = {
         },
       ],
     },
-    {
-      title: "Settings",
-      url: "#",
-      icon: Settings2,
-      items: [
-        {
-          title: "Organization",
-          url: "/settings/organization",
-        },
-        {
-          title: "Tax Rates",
-          url: "/settings/tax-rates",
-        },
-      ],
-    },
   ],
   projects: [],
 };
@@ -116,7 +82,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={data.navMain} />
-        <NavProjects projects={data.projects} />
+        <NavSettings projects={data.projects} />
       </SidebarContent>
       <SidebarFooter>
         <NavUser user={data.user} />
