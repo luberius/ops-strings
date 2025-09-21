@@ -55,7 +55,7 @@ const data = {
       items: [
         {
           title: "All Expenses",
-          url: "/expenses",
+          url: "/app/expenses",
         },
       ],
     },
@@ -82,7 +82,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={data.navMain} />
-        <NavSettings projects={data.projects} />
+        <NavSettings />
       </SidebarContent>
       <SidebarFooter>
         <NavUser user={data.user} />

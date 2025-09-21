@@ -20,7 +20,7 @@ export default function Home() {
     {
       title: "Add Expense",
       description: "Record business expenses",
-      href: "/expenses/new",
+      href: "/app/expenses",
       icon: Receipt,
       color: "bg-purple-500",
     },
