@@ -231,7 +231,7 @@ export default function EditExpensePage({ params }: PageProps) {
         </div>
       </div>
 
-      <div className="bg-white rounded-lg border p-4 sm:p-6 space-y-6">
+      <div className="bg-card rounded-lg border p-4 sm:p-6 space-y-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="space-y-2">
             <Label htmlFor="reference">Reference No</Label>
@@ -377,7 +377,7 @@ export default function EditExpensePage({ params }: PageProps) {
           />
         </div>
 
-        <div className="bg-gray-50 rounded-lg p-4 space-y-4">
+        <div className="bg-muted/50 rounded-lg p-4 space-y-4">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
             <Label className="text-base font-semibold">
               Expense Categories
@@ -398,7 +398,7 @@ export default function EditExpensePage({ params }: PageProps) {
             {formData.categories.map((category, index) => (
               <div
                 key={index}
-                className="bg-white rounded-lg p-3 border border-gray-200"
+                className="bg-background rounded-lg p-3 border"
               >
                 <div className="grid grid-cols-1 sm:grid-cols-12 gap-3 sm:gap-2 items-end">
                   <div className="sm:col-span-5">

@@ -29,8 +29,8 @@ export default async function ExpensesPage() {
       <div className="space-y-6">
         <div className="flex items-center justify-between">
           <div className="flex gap-2 items-center">
-            <Receipt className="text-xs text-black/50" />
-            <span className="text-xs tracking-widest font-semibold uppercase text-black/50">
+            <Receipt className="text-xs text-muted-foreground" />
+            <span className="text-xs tracking-widest font-semibold uppercase text-muted-foreground">
               Expense Management
             </span>
           </div>
@@ -45,28 +45,28 @@ export default async function ExpensesPage() {
     return (
       <div className="space-y-6">
         <div className="flex gap-2 items-center">
-          <Receipt className="text-xs text-black/50" />
-          <span className="text-xs tracking-widest font-semibold uppercase text-black/50">
+          <Receipt className="text-xs text-muted-foreground" />
+          <span className="text-xs tracking-widest font-semibold uppercase text-muted-foreground">
             Expense Management
           </span>
         </div>
 
-        <Card className="border-orange-200 bg-orange-50">
+        <Card className="border-orange-200 dark:border-orange-900 bg-orange-50 dark:bg-orange-950">
           <CardHeader>
             <div className="flex items-center gap-2">
-              <AlertCircle className="h-5 w-5 text-orange-600" />
-              <CardTitle className="text-orange-900">API Configuration Required</CardTitle>
+              <AlertCircle className="h-5 w-5 text-orange-600 dark:text-orange-400" />
+              <CardTitle className="text-orange-900 dark:text-orange-100">API Configuration Required</CardTitle>
             </div>
-            <CardDescription className="text-orange-700">
+            <CardDescription className="text-orange-700 dark:text-orange-300">
               To use the expense management feature, you need to configure your Bigcapital API credentials.
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="space-y-2">
-              <p className="text-sm font-medium text-orange-900">
-                Please add the following to your <code className="bg-orange-100 px-1 py-0.5 rounded">.env.local</code> file:
+              <p className="text-sm font-medium text-orange-900 dark:text-orange-100">
+                Please add the following to your <code className="bg-orange-100 dark:bg-orange-900 px-1 py-0.5 rounded">.env.local</code> file:
               </p>
-              <pre className="bg-orange-100 p-4 rounded-lg text-xs overflow-x-auto">
+              <pre className="bg-orange-100 dark:bg-orange-900/50 p-4 rounded-lg text-xs overflow-x-auto">
 {`# Option 1: Use an existing JWT token
 BIGCAPITAL_TOKEN=your_jwt_token_here
 
@@ -80,10 +80,10 @@ BIGCAPITAL_API_URL=https://fin2.syahril.dev`}
             </div>
 
             <div className="space-y-2">
-              <p className="text-sm text-orange-800">
+              <p className="text-sm text-orange-800 dark:text-orange-200">
                 <strong>To get your JWT token:</strong>
               </p>
-              <ol className="list-decimal list-inside text-sm text-orange-700 space-y-1">
+              <ol className="list-decimal list-inside text-sm text-orange-700 dark:text-orange-300 space-y-1">
                 <li>Login to your Bigcapital account</li>
                 <li>Open browser developer tools (F12)</li>
                 <li>Go to Network tab</li>
@@ -93,7 +93,7 @@ BIGCAPITAL_API_URL=https://fin2.syahril.dev`}
             </div>
 
             {error instanceof Error && (
-              <div className="text-xs text-orange-600 bg-orange-100 p-2 rounded">
+              <div className="text-xs text-orange-600 dark:text-orange-400 bg-orange-100 dark:bg-orange-900/50 p-2 rounded">
                 Error: {error.message}
               </div>
             )}
